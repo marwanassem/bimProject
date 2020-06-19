@@ -1,0 +1,54 @@
+{%  extends 'base.html' %}
+
+{% block content %}
+
+
+
+<div class="container" style="width: 950px; align-content: center; font-size: xx-large; ">
+ <h2 style="font-size: xx-large; font-weight: bold; color: darkred; alignment: center; align-items: center; align-self: center">Total Savings</h2>
+    <ul class="list-group" >
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Project's Pre-construction cost:
+            <span class="badge badge-primary badge-pill">{{ original_cost }} LE</span>
+          </li>
+
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Project's new Construction cost:
+            <span  class="badge badge-primary badge-pill">{{ new_cost }} LE</span>
+          </li>
+
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Project's original duration period:
+            <span class="badge badge-primary badge-pill">{{ original_duration }} Days</span>
+          </li>
+
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+        Project's new duration period:
+        <span class="badge badge-primary badge-pill">{{ new_duration }} Days</span>
+      </li>
+
+</ul>
+
+<div class="container" style="font-size: x-large; align-content: center; background-color: white" >
+        Cost saving includes:
+        <ul>
+            <li>
+                Reduced documents work by: <span style=" position: absolute; right: 750px;" class="badge badge-primary badge-pill" >{{ doc_work }} %</span>
+            </li>
+
+            <li>
+                Reduced rework done by: <span style=" position: absolute; right: 750px"class="badge badge-primary badge-pill">{{ rework }} %</span>
+            </li>
+
+            <li>
+                Fewer claims/litigation by: <span style= " position: absolute; right: 750px" class="badge badge-primary badge-pill">{{ claims }} %</span>
+            </li>
+        </ul>
+
+    </div>
+</div>
+    <br>
+
+
+
+{% endblock %}

@@ -1,0 +1,8 @@
+body{
+    background-image: url("pic.jpeg");
+    width: auto;
+    height: 750px;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
