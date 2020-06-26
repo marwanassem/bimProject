@@ -6,7 +6,7 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return render(request, 'bas.html')
+    return render(request, 'base.html')
 
 
 def bim_cal(request):
@@ -26,11 +26,23 @@ def bim_cal(request):
             duration = form.cleaned_data['duration']
 
             total_percent += Project.get_type_percent(Project, type)
+            print(total_percent)
+
             total_percent += Project.get_size_percent(Project, size)
+            print(Project.get_size_percent(Project, size))
+
             total_percent += Project.get_attributes_percent(Project, document_work)
+            print(document_work)
+            print(Project.get_attributes_percent(Project, document_work))
+
             total_percent += Project.get_attributes_percent(Project, reduced_rework)
+            print(Project.get_attributes_percent(Project, reduced_rework))
+
             total_percent += Project.get_attributes_percent(Project, fewer_claims)
+            print(Project.get_attributes_percent(Project, fewer_claims))
             total_percent = float(total_percent)
+
+            print(total_percent)
 
             doc_work = total_percent * 60.4
             doc_work = "{:.2f}".format(doc_work)

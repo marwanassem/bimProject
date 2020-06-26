@@ -75,7 +75,7 @@ class Project(models.Model):
             percent = 1
         elif label == 'High':
             percent = 0.75
-        elif percent == 'Medium':
+        elif label == 'Medium':
             percent = 0.5
         else:
             percent = 0.25

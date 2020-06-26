@@ -1,0 +1,13 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<div class="jumbotron">
+      <h1 class="display-4">BIM Project</h1>
+      <p class="lead">This software will calculate the Cost and Time savings of using BIM in the Egyptian construction projects</p>
+      <hr class="my-4">
+      <p>Building Information Modeling (BIM) is a process that begins with the creation of an intelligent 3D model and enables document management, coordination and simulation during the entire lifecycle of a project (plan, design, build, operation and maintenance).</p>
+      <p class="lead">
+        <a class="btn btn-primary btn-lg" href="{% url 'bim_cal' %}" role="button">Get Started</a>
+      </p>
+</div>
+{% endblock %}
