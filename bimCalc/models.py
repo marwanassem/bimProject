@@ -14,9 +14,9 @@ class Project(models.Model):
 
     size = (
         ('', 'Choose..'),
-        ('Large', 'Large'),
-        ('Medium', 'Medium'),
-        ('Small', 'Small')
+        ('Large', 'Large >100M'),
+        ('Medium', 'Medium >50:100M'),
+        ('Small', 'Small <50M')
     )
 
     choices = (
